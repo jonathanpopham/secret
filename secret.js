@@ -40,8 +40,8 @@ app = ( function () {
     isAdditive: function (sieve, secret){
 
       var i, j;
-      for (i = 0; i < sieve.length; i += 1) {
-        for (j = i + 1; j < sieve.length; j += 1){
+      for (i = sieve.length - 1; i > 0; i -= 1) {
+        for (j = i - 1; j > 0; j -= 1){
           if(sieve[i] + sieve[j] === secret){
             return true;
           }
